@@ -1,2 +1,2 @@
 # Monitoria-Linguagem-C
-Códigos em linguagem C feitos como treino para prova de monitoria de Introdução a Programação para turma de calouros 2025.1
+Códigos em linguagem C para auxilio na monitoria de Introdução a Programação que ministro para turma de calouros 2025.1
