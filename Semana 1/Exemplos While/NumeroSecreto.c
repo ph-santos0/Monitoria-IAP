@@ -4,18 +4,15 @@ int main()
 {
     int numeroSecreto = 7;
     int palpite;
-    int achou = 0;
 
-    while (achou == 0)
+    while (palpite != numeroSecreto)
     {
-        system("cls");
         printf("Adivinhe o numero secreto (entre 1 e 10): ");
         scanf("%d", &palpite);
 
         if (palpite == numeroSecreto)
         {
             printf("Parabens! Voce acertou!\n");
-            achou = 1;
         }
         else if (palpite < numeroSecreto)
         {
@@ -25,7 +22,6 @@ int main()
         {
             printf("Muito alto! Tente um numero menor.\n");
         }
-        system("pause");
     }
     return 0;
 }
