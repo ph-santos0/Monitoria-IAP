@@ -2,30 +2,34 @@
 
 int main()
 {
+    int prato;
+
     printf("Cardapio\n");
     printf("1. Prato 1\n");
     printf("2. Prato 2\n");
-    printf("1. Prato 3\n");
-    printf("1. Prato 4\n");
+    printf("3. Prato 3\n");
+    printf("4. Prato 4\n");
 
     printf("\nEscolha o prato para verificar calorias: ");
-    int num;
-    scanf("%d", &num);
+    scanf("%d", &prato);
 
-    switch (num)
+    switch (prato)
     {
     case 1:
-        printf("\n180 calorias.\n");
+        prato = 180;
         break;
     case 2:
-        printf("\n230 calorias.\n");
+        prato = 200;
         break;
     case 3:
-        printf("\n250 calorias.\n");
+        prato = 250;
         break;
     case 4:
-        printf("\n350 calorias.\n");
+        prato = 280;
         break;
     }
+
+    printf("O prato selecionado tem %d calorias.", prato);
+
     return 0;
 }
