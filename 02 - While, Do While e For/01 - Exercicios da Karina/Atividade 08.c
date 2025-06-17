@@ -4,9 +4,7 @@ int main() {
     int idade, sexo;
     int fem10a25 = 0;
     int mascMais30 = 0;
-
-    printf("Digite a idade (ou idade < 0 para sair) e o sexo (1-Feminino, 2-Masculino):\n");
-
+    
     while (1) {
         printf("\nIdade: ");
         scanf("%d", &idade);
