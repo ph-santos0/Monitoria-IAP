@@ -5,7 +5,7 @@ int main() {
     int fem10a25 = 0;
     int mascMais30 = 0;
     
-    while (1) {
+    while (idade >= 0) {
         printf("\nIdade: ");
         scanf("%d", &idade);
 
