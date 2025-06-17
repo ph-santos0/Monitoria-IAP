@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() {
-    float s = 0;
-    int i;
-    int n_termos = 20;
+int main()
+{
+    float cont, soma = 0;
 
-    for (i = 1; i <= n_termos; i++) {
-        s += 1.0 / (4.0 * i);
+    for (cont = 1; cont <= 20; cont++)
+    {
+        soma = soma + cont/pow(cont*2, 2);
     }
 
-    printf("O valor de S para o %d termo eh: %f\n", n_termos, s);
+    printf("%f", soma);
 
     return 0;
 }
