@@ -13,7 +13,7 @@ int main()
     {
         fatorial *= i;
     }
-    printf("O fatorial de %d (%d!) eh: %lld\n", n, n, fatorial);
+    printf("O fatorial de %d (%d!) eh: %d\n", n, n, fatorial);
 
     return 0;
 }
