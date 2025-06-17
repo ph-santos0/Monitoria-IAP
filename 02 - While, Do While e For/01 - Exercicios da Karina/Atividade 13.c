@@ -1,22 +1,18 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() {
-    double serie = 0;
-    int i;
-    int n_termos = 8;
-    double numerador, denominador;
+int main()
+{
+    float cont, soma = 0, numerador = 2, denominador = 17;
 
-    for (i = 1; i <= n_termos; i++) {
-        numerador = 2.0 * i;
-        denominador = 17.0 - 2.0 * (i - 1);
-        if (denominador == 0) {
-            printf("Erro: Denominador zero no termo %d.\n", i);
-            return 1;
-        }
-        serie += numerador / denominador;
+    for (cont = 0; cont < 8; cont++)
+    {
+        soma = soma + (numerador/denominador);
+        numerador = numerador + 2;
+        denominador = denominador - 2;
     }
 
-    printf("Soma da serie para o %d termo: %.2f\n", n_termos, serie);
+    printf("%f", soma);
 
     return 0;
 }
