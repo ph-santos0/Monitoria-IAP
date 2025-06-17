@@ -1,38 +1,27 @@
 #include <stdio.h>
 
-int main() {
-    int i = 0;
-    int sexo, temComputador;
-    int femComPC = 0;
-    int totalComPC = 0;
-    int totalAlunos = 5;
+int main()
+{
+    int cont = 0, possui, sexo;
+    float geral = 0, mulheres = 0;
 
-    printf("Pesquisa sobre posse de computador (5 alunos):\n");
-
-    while (i < totalAlunos) {
-        printf("\nAluno %d:\n", i + 1);
-        printf("Sexo (1-Feminino, 2-Masculino): ");
+    while (cont < 5)
+    {
+        printf("Possui computador?\n 1 - Sim\n 2 - Nao\n");
+        scanf("%d", &possui);
+        printf("Selecione:\n 1 - Feminino\n 2 - Masculino\n");
         scanf("%d", &sexo);
-        printf("Possui computador em casa? (1-Sim, 0-Nao): ");
-        scanf("%d", &temComputador);
 
-        if (temComputador == 1) {
-            totalComPC++;
-            if (sexo == 1) {
-                femComPC++;
-            }
+        if (possui == 1)
+        {
+            geral = geral + 1;
         }
-        i++;
+        if (possui == 1 && sexo == 1)
+        {
+            mulheres = mulheres + 1;
+        }
+        cont++;
     }
-
-    float porcentagemComPC = 0;
-    if (totalAlunos > 0) {
-        porcentagemComPC = (float)totalComPC / totalAlunos * 100.0;
-    }
-
-    printf("\nResultados da Pesquisa:\n");
-    printf("Quantidade de alunas do sexo feminino que possuem computador: %d\n", femComPC);
-    printf("Porcentagem de alunos em geral que possuem computador: %.2f%%\n", porcentagemComPC);
-
-    return 0;
+    printf("Quantidade de mulheres com computador: %f\n", mulheres);
+    printf("Porcentagem de alunos com computador: %.2f", (geral / 5) * 100);
 }
