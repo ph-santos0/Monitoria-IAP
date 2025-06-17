@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() {
-    float serie = 0;
-    int i;
-    int n_termos = 11;
+int main()
+{
+    float cont, soma = 0;
 
-    for (i = 1; i <= n_termos; i++) {
-        serie += 1.0 / i;
+    for (cont = 1; cont <= 11; cont++)
+    {
+        soma = soma + cont/pow(cont, 2);
     }
 
-    printf("Soma da serie para o %d termo: %.2f\n", n_termos, serie);
+    printf("%f", soma);
 
     return 0;
 }
