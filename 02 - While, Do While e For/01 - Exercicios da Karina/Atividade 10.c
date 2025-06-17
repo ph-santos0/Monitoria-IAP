@@ -4,16 +4,16 @@ int main()
 {
     int n;
     int fatorial = 1;
-    int i;
+    int cont;
 
-    printf("Digite um numero inteiro nao negativo para calcular o fatorial: ");
+    printf("Digite um numero inteiro positivo para calcular o fatorial: ");
     scanf("%d", &n);
 
-    for (i = 1; i <= n; i++)
+    for (cont = n; cont >= 1; cont--)
     {
-        fatorial *= i;
+        fatorial = fatorial * cont;
     }
-    printf("O fatorial de %d (%d!) eh: %d\n", n, n, fatorial);
+    printf("O fatorial eh: %d\n", fatorial);
 
     return 0;
 }
