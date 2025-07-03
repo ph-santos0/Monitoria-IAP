@@ -4,228 +4,246 @@
 
 void q1()
 {
-    int n = 3, a[3], b[3], c[3];
+    int v1[3], v2[3], v3[3];
 
-    printf("Insira os 3 números do primeiro vetor:\n");
-    for (int i = 0; i < n; i++)
+    printf("Insira os 3 numeros do primeiro vetor:\n");
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d°: ", i + 1);
-        scanf("%d", &a[i]);
+        printf("Posicao %d: ", i);
+        scanf("%d", &v1[i]);
     }
 
-    printf("Insira os 3 números do segundo vetor:\n");
-    for (int i = 0; i < n; i++)
+    printf("Insira os 3 numeros do segundo vetor:\n");
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d°: ", i + 1);
-        scanf("%d", &b[i]);
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        c[i] = a[i] + b[i];
+        printf("Posicao %d: ", i);
+        scanf("%d", &v2[i]);
     }
 
     printf("Soma dos vetores:\n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d°: %d\n", i + 1, c[i]);
+        v3[i] = v1[i] + v2[i];
+        printf("Posicao %d: %d\n", i, v3[i]);
     }
 }
 
 void q2()
 {
-    int n = 3, v[3];
+    int vetor[3];
 
-    printf("Insira os 3 números do vetor:\n");
-    for (int i = 0; i < n; i++)
+    printf("Insira os 3 numeros do vetor:\n");
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d°: ", i + 1);
-        scanf("%d", &v[i]);
+        printf("Posicao %d: ", i);
+        scanf("%d", &vetor[i]);
     }
 
-    printf("Ímpares:\n");
-    for (int i = 0; i < n; i++)
+    printf("Impares:\n");
+    for (int i = 0; i < 3; i++)
     {
-        if (v[i] % 2 != 0)
+        if (vetor[i] % 2 != 0)
         {
-            printf("%d°: %d\n", i + 1, v[i]);
+            printf("Posicao %d: %d\n", i, vetor[i]);
         }
     }
 }
 
 void q3()
 {
-    int n = 6, a[6], m[6], x;
+    int a[6], m[6], x;
 
-    printf("Insira os 6 números do vetor:\n");
-    for (int i = 0; i < n; i++)
+    printf("Insira os 6 numeros do vetor:\n");
+    for (int i = 0; i < 6; i++)
     {
-        printf("%d°: ", i + 1);
+        printf("Posicao %d: ", i);
         scanf("%d", &a[i]);
     }
 
-    printf("Insira um valor para multiplicar:\n");
+    printf("\nInsira um valor para multiplicar: ");
     scanf("%d", &x);
 
-    for (int i = 0; i < n; i++)
+    printf("\nVetor resultado:\n");
+    for (int i = 0; i < 6; i++)
     {
         m[i] = a[i] * x;
-    }
-
-    printf("Vetor resultado:\n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d°: %d\n", i + 1, m[i]);
+        printf("Posicao %d: %d\n", i, m[i]);
     }
 }
 
 void q4()
 {
-    int n = 5;
-    double notas[5], total = 0;
+    float notas[5], soma = 0;
 
     printf("Digite 5 notas:\n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 5; i++)
     {
-        printf("%d°: ", i + 1);
-        scanf("%lf", &notas[i]);
-        total += notas[i];
+        printf("Posicao %d: ", i);
+        scanf("%f", &notas[i]);
+        soma = soma + notas[i];
     }
 
-    printf("Notas maiores que a média:\n");
-    for (int i = 0; i < n; i++)
+    printf("Notas maiores que a media da turma:\n");
+    for (int i = 0; i < 5; i++)
     {
-        if (notas[i] > total / n)
+        if (notas[i] > soma / 5)
         {
-            printf("%d°: %.2lf\n", i + 1, notas[i]);
+            printf("Posicao %d: %.2f\n", i, notas[i]);
         }
     }
 }
 
 void q5()
 {
-    int n = 8, x[8], conty = 0, contw = 0;
-    int y[8], w[8];
+    int x[8], y[8], w[4], indicey = 0, indicew = 0;
 
-    printf("Digite %d números:\n", n);
-    for (int i = 0; i < n; i++)
+    printf("Digite 8 elementos para o vetor X:\n");
+    for (int i = 0; i < 8; i++)
     {
-        printf("%d°: ", i + 1);
+        printf("Posicao %d: ", i);
         scanf("%d", &x[i]);
-        if (x[i] >= 10 && x[i] <= 40)
+        if (x[i] > 10 && x[i] < 40)
         {
-            y[conty++] = x[i];
+            y[indicey] = x[i];
+            indicey++;
         }
-        if (i % 2 != 0)
+        if (i % 2 == 0)
         {
-            w[contw++] = x[i];
+            w[indicew] = x[i];
+            indicew++;
         }
     }
 
-    printf("Vetor de números entre 10 e 40:\n");
-    for (int i = 0; i < conty; i++)
+    printf("\nVetor Y de numeros do vetor X que estao entre 10 e 40:\n");
+    for (int i = 0; i < indicey; i++)
     {
-        printf("%d°: %d\n", i + 1, y[i]);
+        printf("Posicao %d: %d\n", i, y[i]);
     }
 
-    printf("Vetor de números nas posições pares:\n");
-    for (int i = 0; i < contw; i++)
+    printf("\nVetor W de numeros nas posicoes pares do vetor X:\n");
+    for (int i = 0; i < indicew; i++)
     {
-        printf("%d°: %d\n", i + 1, w[i]);
+        printf("Posicao %d: %d\n", i, w[i]);
     }
 }
 
 void q6()
 {
     int n;
-    printf("Tamanho do vetor:\n");
+    printf("Tamanho do vetor: ");
     scanf("%d", &n);
-
     int vetor[n];
-    printf("Digite %d números:\n", n);
+
+    printf("\nDigite os %d numeros do vetor:\n", n);
     for (int i = 0; i < n; i++)
     {
-        printf("%d°: ", i + 1);
+        printf("Posicao %d: ", i);
         scanf("%d", &vetor[i]);
     }
 
-    printf("Ordem inversa:\n");
+    printf("\nOrdem inversa:\n");
     for (int i = n - 1; i >= 0; i--)
     {
-        printf("%d°: %d\n", n - i, vetor[i]);
+        printf("Posicao %d: %d\n", i, vetor[i]);
     }
 }
 
 void q7()
 {
     int n;
-    printf("Insira o número de lançamentos do dado: ");
+    printf("Insira o numero de lancamentos do dado: ");
     scanf("%d", &n);
 
-    int lances[n];
-    srand(time(NULL));
+    int lances[n], faces[7] = {0};
 
+    printf("\nInsira o resultado dos lancamentos (Valores de 1 a 7): \n");
     for (int i = 0; i < n; i++)
     {
-        lances[i] = rand() % 6 + 1;
-        printf("%d\n", lances[i]);
+        printf("Lancamento %d: ", i + 1);
+        scanf("%d", &lances[i]);
+
+        switch (lances[i])
+        {
+        case 1:
+            faces[0]++;
+            break;
+        case 2:
+            faces[1]++;
+            break;
+        case 3:
+            faces[2]++;
+            break;
+        case 4:
+            faces[3]++;
+            break;
+        case 5:
+            faces[4]++;
+            break;
+        case 6:
+            faces[5]++;
+            break;
+        case 7:
+            faces[6]++;
+            break;
+        }
+    }
+
+    printf("\nOcorrencias de cada face:\n");
+    for (int i = 0; i < 7; i++)
+    {
+        printf("Face %d: %d\n", i + 1, faces[i]);
     }
 }
 
 void q8()
 {
     int n;
-    printf("Digite o número de elementos dos vetores: ");
+    printf("Digite o numero de elementos dos vetores x e y: ");
     scanf("%d", &n);
+    int x[n], y[n], produtoEscalar = 0;
 
-    int x[n], y[n];
-    printf("Digite os elementos do vetor x:\n");
+    printf("\nDigite os elementos do vetor x:\n");
     for (int i = 0; i < n; i++)
     {
+        printf("Posicao %d: ", i);
         scanf("%d", &x[i]);
     }
 
-    printf("Digite os elementos do vetor y:\n");
+    printf("\nDigite os elementos do vetor y:\n");
     for (int i = 0; i < n; i++)
     {
+        printf("Posicao %d: ", i);
         scanf("%d", &y[i]);
+        produtoEscalar = produtoEscalar + x[i] * y[i];
     }
 
-    int produtoEscalar = 0;
-    for (int i = 0; i < n; i++)
-    {
-        produtoEscalar += x[i] * y[i];
-    }
-
-    printf("O produto escalar dos vetores é: %d\n", produtoEscalar);
+    printf("\nO produto escalar dos vetores e: %d", produtoEscalar);
 }
 
 void q9()
 {
-    char gabarito[3];
-    printf("Insira a resposta das 3 questões da prova (A a E):\n");
+    char gabarito[3], respostas[3];
+    int numAlunos, RA;
+
+    printf("Insira o gabarito das 3 questoes da prova (A a E):\n");
     for (int i = 0; i < 3; i++)
     {
-        printf("%dª questão: ", i + 1);
+        printf("%da questao: ", i + 1);
         scanf(" %c", &gabarito[i]);
     }
 
-    int num;
-    printf("Insira o número de alunos: ");
-    scanf("%d", &num);
+    printf("Insira o numero de alunos: ");
+    scanf("%d", &numAlunos);
 
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < numAlunos; i++)
     {
-        int numeroAluno;
-        char respostas[3];
+        printf("\nRA do aluno: ");
+        scanf("%d", &RA);
+
         int acertos = 0;
-
-        printf("\nNúmero do aluno: ");
-        scanf("%d", &numeroAluno);
-
         for (int j = 0; j < 3; j++)
         {
-            printf("Resposta da %dª questão: ", j + 1);
+            printf("Resposta da %da questao: ", j + 1);
             scanf(" %c", &respostas[j]);
             if (respostas[j] == gabarito[j])
             {
@@ -233,44 +251,44 @@ void q9()
             }
         }
 
-        printf("Aluno %d acertou %d questão(ões).\n", numeroAluno, acertos);
+        printf("Aluno %d acertou %d questao(oes).\n", RA, acertos);
     }
 }
 
 void q10()
 {
-    double A[5], B[5], X;
-    int encontrado = 0;
+    float A[5], B[5], X;
 
     printf("Digite 5 valores para o vetor A:\n");
     for (int i = 0; i < 5; i++)
     {
         printf("A[%d]: ", i);
-        scanf("%lf", &A[i]);
+        scanf("%f", &A[i]);
     }
 
-    printf("Digite um valor para X: ");
-    scanf("%lf", &X);
+    printf("\nDigite um valor para X: ");
+    scanf("%f", &X);
 
+    int encontrado = 0;
     for (int i = 0; i < 5; i++)
     {
         if (A[i] == X)
         {
-            printf("O valor X = %.2lf foi encontrado na posição %d do vetor A.\n", X, i);
+            printf("O valor X = %.0f foi encontrado na posicao %d do vetor A.\n", X, i);
             encontrado = 1;
         }
     }
 
     if (!encontrado)
     {
-        printf("O valor X = %.2lf não foi encontrado no vetor A.\n", X);
+        printf("O valor X = %f nao foi encontrado no vetor A.\n", X);
     }
 
-    printf("Vetor B (A[i] / X):\n");
+    printf("\nVetor B (A[i] / X):\n");
     for (int i = 0; i < 5; i++)
     {
         B[i] = A[i] / X;
-        printf("B[%d] = %.2lf\n", i, B[i]);
+        printf("B[%d] = %.2f\n", i, B[i]);
     }
 }
 
@@ -285,20 +303,21 @@ void q11()
         scanf("%d", &A[i]);
     }
 
-    printf("Digite 5 valores inteiros para o vetor B:\n");
+    printf("\nDigite 5 valores inteiros para o vetor B:\n");
     for (int i = 0; i < 5; i++)
     {
         printf("B[%d]: ", i);
         scanf("%d", &B[i]);
     }
 
+    // Intercalando (2*i = pares | 2*i+1 = impares)
     for (int i = 0; i < 5; i++)
     {
         C[i * 2] = A[i];
         C[i * 2 + 1] = B[i];
     }
 
-    printf("Vetor C (intercalado):\n");
+    printf("\nVetor C (intercalado):\n");
     for (int i = 0; i < 10; i++)
     {
         printf("C[%d] = %d\n", i, C[i]);
@@ -369,7 +388,7 @@ int main()
             break;
         case 0:
             printf("Obrigado por utilizar o sistema!\n\n");
-            exit(0);
+            return 0;
         default:
             printf("Opção inválida!\n");
         }
