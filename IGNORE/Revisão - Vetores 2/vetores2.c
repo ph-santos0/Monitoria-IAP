@@ -395,7 +395,7 @@ int main()
 
         system("pause");
 
-    } while (1);
+    } while (opcao != 0);
 
     return 0;
 }
