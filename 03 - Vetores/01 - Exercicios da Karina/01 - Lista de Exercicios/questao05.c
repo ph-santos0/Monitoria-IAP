@@ -2,7 +2,8 @@
 
 int main()
 {
-    int x[8], y[8], w[4], indicey = 0, indicew = 0;
+    int indicey = 0, indicew = 0;
+    int x[8], y[indicey], w[4];
 
     printf("Digite 8 elementos para o vetor X:\n");
     for (int i = 0; i < 8; i++)
@@ -28,7 +29,7 @@ int main()
     }
 
     printf("\nVetor W de numeros nas posicoes pares do vetor X:\n");
-    for (int i = 0; i < indicew; i++)
+    for (int i = 0; i < 4; i++)
     {
         printf("Posicao %d: %d\n", i, w[i]);
     }
