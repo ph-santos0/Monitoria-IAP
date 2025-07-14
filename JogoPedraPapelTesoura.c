@@ -14,7 +14,7 @@ int main()
             printf("-- Jogo Pedra Papel Tesoura --\n");
             printf("1 - Jogador contra Jogador\n");
             printf("2 - Jogador contra Maquina\n");
-            printf("Escolha uma das opcoes: ");
+            printf("\nEscolha uma das opcoes: ");
             scanf("%d", &ModoJogo);
         } while (ModoJogo < 1 || ModoJogo > 2);
 
@@ -29,7 +29,7 @@ int main()
                     printf("1 - Pedra\n");
                     printf("2 - Papel\n");
                     printf("3 - Tesoura\n");
-                    printf("Insira sua jogada: ");
+                    printf("\nInsira sua jogada: ");
                     scanf("%d", &jogada1);
                 } while (jogada1 < 1 || jogada1 > 3);
                 do
@@ -39,7 +39,7 @@ int main()
                     printf("1 - Pedra\n");
                     printf("2 - Papel\n");
                     printf("3 - Tesoura\n");
-                    printf("Insira sua jogada: ");
+                    printf("\nInsira sua jogada: ");
                     scanf("%d", &jogada2);
                 } while (jogada2 < 1 || jogada2 > 3);
 
@@ -67,26 +67,25 @@ int main()
                 printf("Vitorias do jogador 2: %d\n", vitorias2);
                 printf("Empates: %d\n", empates);
 
-                printf("\n1 - Jogar novamente mantendo pontuacao\n");
-                printf("2 - Jogar novamente resetando pontuacao\n");
-                printf("3 - Sair para menu\n");
-                printf("4 - Sair do jogo\n");
+                printf("\n1 - Jogar novamente\n");
+                printf("2 - Sair para menu\n");
+                printf("3 - Sair do jogo\n");
 
-                printf("Escolha uma das opcoes: ");
+                printf("\nEscolha uma das opcoes: ");
                 scanf("%d", &opcaofinal);
 
-                if (opcaofinal == 2 || opcaofinal == 3)
+                if (opcaofinal == 2)
                 {
                     vitorias1 = 0;
                     vitorias2 = 0;
                     empates = 0;
                 }
-                else if (opcaofinal == 4)
+                else if (opcaofinal == 3)
                 {
                     printf("Saindo do jogo...\n");
                     return 0;
                 }
-            } while (opcaofinal == 1 || opcaofinal == 2);
+            } while (opcaofinal == 1);
         }
         else if (ModoJogo == 2)
         {
@@ -99,7 +98,7 @@ int main()
                     printf("1 - Pedra\n");
                     printf("2 - Papel\n");
                     printf("3 - Tesoura\n");
-                    printf("Insira sua jogada: ");
+                    printf("\nInsira sua jogada: ");
                     scanf("%d", &jogada1);
                 } while (jogada1 < 1 || jogada1 > 3);
 
@@ -109,7 +108,7 @@ int main()
                 printf("2 - Papel\n");
                 printf("3 - Tesoura\n");
                 jogada2 = rand() % 3 + 1;
-                printf("Jogada da maquina foi: %d\n", jogada2);
+                printf("\nJogada da maquina foi: %d\n", jogada2);
                 system("pause");
 
                 system("cls");
@@ -135,26 +134,25 @@ int main()
                 printf("Vitorias da maquina: %d\n", vitorias2);
                 printf("Empates: %d\n", empates);
 
-                printf("\n1 - Jogar novamente mantendo pontuacao\n");
-                printf("2 - Jogar novamente resetando pontuacao\n");
-                printf("3 - Sair para menu\n");
-                printf("4 - Sair do jogo\n");
+                printf("\n1 - Jogar novamente\n");
+                printf("2 - Sair para menu\n");
+                printf("3 - Sair do jogo\n");
 
-                printf("Escolha uma das opcoes: ");
+                printf("\nEscolha uma das opcoes: ");
                 scanf("%d", &opcaofinal);
 
-                if (opcaofinal == 2 || opcaofinal == 3)
+                if (opcaofinal == 2)
                 {
                     vitorias1 = 0;
                     vitorias2 = 0;
                     empates = 0;
                 }
-                else if (opcaofinal == 4)
+                else if (opcaofinal == 3)
                 {
                     printf("Saindo do jogo...\n");
                     return 0;
                 }
-            } while (opcaofinal == 1 || opcaofinal == 2);
+            } while (opcaofinal == 1);
         }
-    } while (opcaofinal == 3);
+    } while (opcaofinal == 2);
 }
