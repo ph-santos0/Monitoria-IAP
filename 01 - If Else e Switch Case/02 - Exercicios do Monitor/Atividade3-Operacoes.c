@@ -4,7 +4,7 @@ int main()
 {
     int opcao;
     float num1, num2, resultado;
-
+    
     printf("Digite o primeiro numero inteiro: ");
     scanf("%f", &num1);
 
