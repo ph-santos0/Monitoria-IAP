@@ -41,7 +41,7 @@ int main()
 
     if (somaLinha1 == somaLinha2 && somaLinha2 == somaLinha3 && somaColuna1 == somaColuna2 && somaColuna2 == somaColuna3 && somaPrincipal == somaSecundaria)
     {
-        printf("%d = soma e a matriz e um quadrado magico.\n", somaLinha1 / 3); // divide por 3 pois a matriz soma 2 vezes a mais no for
+        printf("%d = soma e a matriz e um quadrado magico.\n", somaLinha1 / 3); // divide por 3 pois a matriz soma 3 vezes no for
     }
     else
     {
@@ -50,3 +50,4 @@ int main()
 
     return 0;
 }
+
