@@ -20,14 +20,30 @@ int main()
     {
         for (int j = 0; j < 3; j++)
         {
-            somaLinha1 += matriz[0][j];
-            somaLinha2 += matriz[1][j];
-            somaLinha3 += matriz[2][j];
-
-            somaColuna1 += matriz[i][0];
-            somaColuna2 += matriz[i][1];
-            somaColuna3 += matriz[i][2];
-
+            if (i == 0)
+            {
+                somaLinha1 += matriz[i][j];
+            }
+            else if (i == 1)
+            {
+                somaLinha2 += matriz[i][j];
+            }
+            else if (i == 2)
+            {
+                somaLinha3 += matriz[i][j];
+            }
+            if (j == 0)
+            {
+                somaColuna1 += matriz[i][j];
+            }
+            else if (j == 1)
+            {
+                somaColuna2 += matriz[i][j];
+            }
+            else if (j == 2)
+            {
+                somaColuna3 += matriz[i][j];
+            }
             if (i == j)
             {
                 somaPrincipal += matriz[i][j];
@@ -39,15 +55,16 @@ int main()
         }
     }
 
-    if (somaLinha1 == somaLinha2 && somaLinha2 == somaLinha3 && somaColuna1 == somaColuna2 && somaColuna2 == somaColuna3 && somaPrincipal == somaSecundaria)
+    if (somaLinha1 == somaLinha2 && somaLinha2 == somaLinha3 &&
+        somaLinha3 == somaColuna1 && somaColuna1 == somaColuna2 && somaColuna2 == somaColuna3 &&
+        somaColuna3 == somaPrincipal && somaPrincipal == somaSecundaria)
     {
-        printf("%d = soma e a matriz e um quadrado magico.\n", somaLinha1 / 3); // divide por 3 pois a matriz soma 3 vezes no for
+        printf("\n%d = soma | A matriz e um quadrado magico.\n", somaLinha1);
     }
     else
     {
-        printf("-10, A matriz nao e um quadrado magico.\n");
+        printf("\n-10 | A matriz nao e um quadrado magico.\n");
     }
 
     return 0;
 }
-

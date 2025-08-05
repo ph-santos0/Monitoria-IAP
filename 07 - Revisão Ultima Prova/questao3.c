@@ -18,9 +18,18 @@ int main()
     {
         for (int j = 0; j < 3; j++)
         {
-            somaColuna1 += matriz[i][0];
-            somaColuna2 += matriz[i][1];
-            somaColuna3 += matriz[i][2];
+            if (j == 0)
+            {
+                somaColuna1 += matriz[i][j];
+            }
+            else if (j == 1)
+            {
+                somaColuna2 += matriz[i][j];
+            }
+            else if (j == 2)
+            {
+                somaColuna3 += matriz[i][j];
+            }
         }
     }
 
